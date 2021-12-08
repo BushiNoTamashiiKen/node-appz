@@ -1,0 +1,181 @@
+/*-- Sass test 01 --*/
+/**
+ * Grid layout mixin
+ * Uses flexbox for layout
+ */
+/**
+  * Padding settings
+  * Accepts 1 to four args
+  */
+/**
+  * Centers elements in viewport
+  * Must be within relative container
+  */
+/**
+  * Define responsive viewport directives
+  * Controls responsive layout view
+  */
+/**
+ * App Effects mixin
+ * Used by main.scss
+ */
+/**
+  * Controls links visual
+  */
+/**
+  * Overlays images 
+  */
+/**
+  * Creates rounded corners
+  * Includes browser prefixes
+  */
+/**
+ * App components:
+ * Buttons, Loaders, Scrollers, Tabs etc.
+ */
+.inv {
+  display: none; }
+
+.vis {
+  display: block; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  font-family: helvetica-neue, helvetica, sans-serif; }
+  body a {
+    color: #fafafa; }
+    body a:hover {
+      color: #464e56;
+      text-decoration: underline; }
+    body a:active {
+      color: #464e56;
+      text-decoration: underline; }
+  body p {
+    font-size: 14px; }
+    @media screen and (max-width: 480px) {
+      body p {
+        font-size: 18px;
+        line-height: 1.5em; } }
+  body button {
+    background: #2897f9;
+    border: none;
+    padding: 1.5em;
+    color: #fafafa;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+video {
+  object-fit: cover; }
+
+header {
+  /* Rectangle: */
+  background-image: linear-gradient(-150deg, #EC5E7C 0%, #0742B8 100%);
+  text-align: center;
+  color: #fafafa;
+  padding: 20px 50px; }
+
+.contents {
+  position: relative;
+  max-width: 1900px; }
+  .contents article {
+    background: #fafafa;
+    z-index: 2;
+    padding: 30px 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .contents figure img:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 50px 30px;
+  background: #e0e0e0; }
+  footer p {
+    color: #464e56;
+    text-align: center; }
+  footer a {
+    color: #464e56; }
+    footer a:hover {
+      color: none;
+      text-decoration: #464e56; }
+    footer a:active {
+      color: #464e56;
+      text-decoration: #464e56; }
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; } }
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    @inlcude app_grid(flex, column, wrap);
+    padding: 30px 30px; } }
+
+@media screen and (max-width: 480px) {
+  .contents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; } }
+
+.dark {
+  background: #333;
+  color: #bada55; }
+
+.btn.btn-raised:not(.btn-link), .input-group-btn .btn.btn-raised:not(.btn-link), .btn-group-raised .btn:not(.btn-link), .btn-group-raised .input-group-btn .btn:not(.btn-link) {
+  background-color: #2897f9; }
+
+.btn.btn-raised:not(.btn-link):hover.btn-primary {
+  background-color: #2897f9; }
+
+.form-control, .form-group .form-control {
+  background-image: linear-gradient(#2897f9, #2897f9), linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: -webkit-linear-gradient(#2897f9, #2897f9), -webkit-linear-gradient(#D2D2D2, #D2D2D2); }
+
+.form-group.is-focused .form-control {
+  background-image: linear-gradient(#2897f9, #2897f9), linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: -webkit-linear-gradient(#2897f9, #2897f9), -webkit-linear-gradient(#D2D2D2, #D2D2D2); }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+fieldset {
+  border: none; }
+
+legend {
+  text-align: left;
+  font-weight: 400;
+  margin-bottom: 0; }
+
+input {
+  padding: 10px; }
+
+:-moz-placeholder {
+  color: blue; }
+
+:-webkit-placeholder {
+  color: blue; }

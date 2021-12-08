@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Backlog Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link async rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Backlog Styling theme -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Fonts and icons -->
+    <link async href="css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <script defer src="https://use.fontawesome.com/eb30e6e71c.js"></script>
+
+    <!-- Chart Plugin -->
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+        	<div class="sidebar__wrapper">
+                <figure class="sidebar__logo">
+                    <a href="https://nulab-inc.com/ja/" class="sidebar__logo--graphic">
+                        <img src="img/logo_site@2x.png" alt="Backlog by Nulab">
+                    </a>
+                </figure>
+
+                <ul class="nav">
+                    <li class="nav--active">
+                        <a href="index.html">
+                            <i class="pe-7s-graph"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user.html">
+                            <i class="pe-7s-user"></i>
+                            <p>MeatMan</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">
+                            <i class="pe-7s-bell"></i>
+                            <p>Issues</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="table.html">
+                            <i class="pe-7s-note2"></i>
+                            <p>Wiki</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="typography.html">
+                            <i class="pe-7s-news-paper"></i>
+                            <p>Files</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="icons.html">
+                            <i class="pe-7s-science"></i>
+                            <p>Git</p>
+                        </a>
+                    </li>
+    				<li class="active-pro">
+                        <a href="upgrade.html">
+                            <i class="pe-7s-rocket"></i>
+                            <p>Nulab Services</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <p class="footer__copyright">
+                        &copy; <script>document.write(new Date().getFullYear())</script> <a href="https://nulab-inc.com/ja/">nulab-inc.com</a>
+                    </p>
+                </footer>
+                <!-- /Footer -->
+        	</div>
+        </aside>
+        <!-- Sidebar -->
+
+        <!-- Main Panel -->
+        <article class="main-panel">
+
+            <!-- Bootstrap Nav Compo -->
+            <nav class="main-panel__navbar navbar-fixed">
+                <div class="container-fluid">
+                    <header class="navbar-header">
+                        <a href="https://nulab-inc.com/ja/" class="navbar-brand-mobile">
+                            <img src="img/logo_site_green@2x.png" alt="Backlog by Nulab">
+                        </a>
+                        <div class="navbar-nav">
+                            <a class="navbar-brand" href="#">Dashboard</a>
+                            <a id="new-btn-mobile" class="new-btn" href="#">
+                                <span><i class="fa fa-plus" aria-hidden="true"></i></span>
+                            </a>
+                        </div>
+                    </header>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-globe"></i>
+                                    <b class="caret hidden-sm hidden-xs"></b>
+                                    <span class="navbar-nav__notification hidden-sm hidden-xs">3</span>
+    								<p class="hidden-lg hidden-md">
+    									3 Notifications
+    									<b class="caret"></b>
+    								</p>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Notification 1</a></li>
+                                    <li><a href="#">Notification 2</a></li>
+                                    <li><a href="#">Notification 3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <form class="search-form-header">
+                                    <div class="search-field">
+                                        <input type="text" name="q" id="q" value="" autocomplete="off" spellcheck="false" autocorrect="false" placeholder="Search" class="form-control">
+                                        <i class="fa fa-search"></i>
+                                    </div>
+                                </form>
+    							<p class="hidden-lg hidden-md">Search</p>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a class="new-btn" href="#">
+                                    <span><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                    New Project
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                   <p>Team Members<span><i class="fa fa-user-plus" aria-hidden="true"></i></span>
+                                   </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>Settings<span><i class="fa fa-cog" aria-hidden="true"></i></span></p>
+                                </a>
+                            </li>
+    						<li class="separator hidden-lg hidden-md"></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- /Bootstrap Nav Compo -->
+
+            <!-- Content -->
+            <main role="main" class="content">
+                <div class="container-fluid">
+
+                    <!-- Row_01 -->
+                    <div class="row">
+
+                        <!-- Col_01 -->
+                        <div class="col-md-4">
+                            <article class="card">
+                                <header class="card__header">
+                                    <h4 class="card__title">Projects</h4>
+                                    <span class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            July 2017<b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="#">June 2017</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">May 2017</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">April 2017</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li>
+                                                <a href="#">View Calendar</a>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </header>
+                                <section class="card__content__progressBars">
+
+                                    <!-- DONE -->
+                                    <article>
+                                        <div id="bar_01">
+                                            <div class="card__ct-chart__value">
+                                            </div>
+                                        </div>
+                                        <footer class="card__ct-chart__Head">
+                                            <h5>Completed</h5>
+                                        </footer>
+                                    </article>
+                                    <!-- /DONE -->
+
+                                    <!-- Progress Metadata -->
+                                    <article class="card__content__progressBars__meta">
+
+                                        <!-- Ongoing -->
+                                        <div id="bar_02">
+                                            <div class="card__ct-chart__value">
+                                            </div>
+                                        </div>
+                                        <footer class="card__ct-chart__Head">
+                                            <h5 class="theme_01">Ongoing</h5>
+                                        </footer>
+                                        <!-- Ongoing -->
+
+                                        <!-- Upcoming -->
+                                        <div id="bar_03">
+                                            <div class="card__ct-chart__value">
+                                            </div>
+                                        </div>
+                                        <footer class="card__ct-chart__Head">
+                                            <h5 class="theme_01">Upcoming</h5>
+                                        </footer>
+                                        <!-- Upcoming -->
+
+                                    </article>  
+                                    <!-- /Progress Meta -->
+                                </section>
+                                <footer class="card__footer">
+                                    <hr>
+                                    <div class="card__stats">
+                                        <i class="fa fa-clock-o"></i> Last updated 2 days ago
+                                    </div>
+                                </footer>
+                            </article>
+                        </div>
+                        <!-- /Col_01 -->
+
+                        <!-- Col_02 -->
+                        <div id="burndown" class="col-md-8">
+                            <article class="card">
+                                <header class="card__header">
+                                    <h4 class="card__title">Burndown Chart</h4>
+                                    <span class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            Design Team<b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="#">Dev Team</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">QA Team</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Server Team</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">UX Team</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li>
+                                                <a href="#">View All</a>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </header>
+                                <section class="card__content">
+                                    <article class="card__ct-chart">
+                                        <header></header>
+
+                                        <!-- Draw Line Chart -->
+                                        <canvas id="burndownChart" height="105px"></canvas>
+                                        <!-- /Draw Line Chart -->
+                                    </article>
+                                </section>
+                                <footer class="card__footer">
+                                    <hr>
+                                    <div class="card__stats">
+                                        <i class="fa fa-clock-o"></i>Last updated 2 days ago
+                                    </div>
+                                </footer>
+                            </article>
+                        </div>
+                        <!-- /Col_02 -->
+                    </div>
+                    <!-- /Row_01 -->
+
+                    <!-- Row_02 -->
+                    <div class="row">
+
+                        <!-- Col_01 -->
+                        <div class="col-md-8">
+                            <article class="card">
+                                <header class="card__header">
+                                    <h4 class="card__title">Task Updates</h4>
+                                    <span>Wed July 19, 2017</span>
+                                </header>
+                                <section class="card__content">
+                                    <article class="post-box">
+                                        <header class="post-box__info-meta-header">
+                                            <figure class="post-box__avatar">
+                                                <a class="post-box__avatar__image-icon" href="#">
+                                                    <img src="img/inkyfingerz_1390214600_444.jpg" alt="Profile Thumb">
+                                                </a>
+                                            </figure>
+                                            <div class="post-box__info-meta-text">
+                                                <h4>
+                                                    <a class="info-meta-link" href="#">Thabo Mbuyisa<span class="info-meta-link__push-action">pushed to Dev</span>
+                                                    </a>
+                                                    <span>about 1 hour ago </span>
+                                                </h4>
+                                                <p class="commit-log__item">   
+                                                    <a href="#">
+                                                        <span><i class="fa fa-tasks" aria-hidden="true"></i></span>ee83517cdb
+                                                    </a>
+                                                    <span class="commit-log__message">Task updates area and Projects status components created</span>
+                                                </p>
+                                            </div>
+                                        </header>
+                                        <footer class="post-box__box-bottom">
+                                            <div class="post-box__box-bottom__comments">
+                                                <span class=""><i class="fa fa-comments-o" aria-hidden="true"></i>5 Comments</span>
+                                            </div>
+                                            <a class="oval-btn-lrg" href="#">Comment</a>
+                                        </footer>
+                                    </article>
+                                    <article class="post-box">
+                                        <header class="post-box__info-meta-header">
+                                            <figure class="post-box__avatar">
+                                                <a class="post-box__avatar__image-icon" href="#">
+                                                    <img src="img/inkyfingerz_1390214600_444.jpg" alt="Profile Thumb">
+                                                </a>
+                                            </figure>
+                                            <div class="post-box__info-meta-text">
+                                                <h4>
+                                                    <a class="info-meta-link" href="#">Thabo Mbuyisa<span class="info-meta-link__push-action">pushed to Dev</span></a>
+                                                    <span class="info-meta-time">about 1 hour ago </span>
+                                                </h4>
+                                                <p class="commit-log__item">
+                                                    <a href="#"><span><i class="fa fa-tasks" aria-hidden="true"></i></span>ee83517cdb</a>
+                                                    <span class="commit-log__message">Task updates area and Projects status components created</span>
+                                                </p>
+                                                <p class="commit-log__item">   
+                                                    <a href="#"><span><i class="fa fa-tasks" aria-hidden="true"></i></span>ee83517cdb</a>
+                                                    <span class="commit-log__message">Task updates area and Projects status components created</span>
+                                                </p>
+                                            </div>
+                                        </header>
+                                        <footer class="post-box__box-bottom">
+                                            <div class="post-box__box-bottom__comments">
+                                                <span class=""><i class="fa fa-comments-o" aria-hidden="true"></i>5 Comments</span>
+                                            </div>
+                                            <a class="oval-btn-lrg" href="#">Comment</a>
+                                        </footer>
+                                    </article>
+                                </section>
+                                <footer class="card__footer">
+                                    <hr>
+                                    <div class="card__stats">
+                                        <i class="fa fa-clock-o"></i> Last updated 2 days ago
+                                    </div>
+                                </footer>
+                            </article>
+
+                            <!-- Updates_02 -->
+                            <article class="card">
+                                <header class="card__header">
+                                    <h4 class="card__title">Task Updates</h4>
+                                    <span>Wed July 19, 2017</span>
+                                </header>
+                                <section class="card__content">
+                                    <article class="post-box">
+                                        <header class="post-box__info-meta-header">
+                                            <figure class="post-box__avatar">
+                                                <a class="post-box__avatar__image-icon" href="#">
+                                                    <img src="img/inkyfingerz_1390214600_444.jpg" alt="Profile Thumb">
+                                                </a>
+                                            </figure>
+                                            <div class="post-box__info-meta-text">
+                                                <h4>
+                                                    <a class="info-meta-link" href="#">Thabo Mbuyisa<span class="info-meta-link__branch-action">Created branch Dev</span>
+                                                    </a>
+                                                    <span class="info-meta-time">about 1 hour ago </span>
+                                                </h4>
+                                                <p class="commit-log__item">   
+                                                    <a href="#">
+                                                        <span><i class="fa fa-tasks" aria-hidden="true"></i>
+                                                        </span>ee83517cdb
+                                                    </a>
+                                                    <span class="commit-log__message">Task updates area and Projects status components created</span>
+                                                </p>
+                                                <p class="commit-log__item">
+                                                    <a href="#">
+                                                        <span><i class="fa fa-tasks" aria-hidden="true"></i>
+                                                        </span>ee83517cdb
+                                                    </a>
+                                                    <span class="commit-log__message">Task updates area and Projects status components created</span>
+                                                </p>
+                                            </div>
+                                        </header>
+                                        <footer class="post-box__box-bottom">
+                                            <div class="post-box__box-bottom__comments">
+                                                <span class=""><i class="fa fa-comments-o" aria-hidden="true"></i>5 Comments</span>
+                                            </div>
+                                            <a class="oval-btn-lrg" href="#">Comment</a>
+                                        </footer>
+                                    </article>
+                                </section>
+                                <section class="card__content">
+                                    <article class="post-box">
+                                        <header class="post-box__info-meta-header">
+                                            <figure class="post-box__avatar">
+                                                <a class="post-box__avatar__image-icon" href="#">
+                                                    <img src="img/inkyfingerz_1390214600_444.jpg" alt="Profile Thumb">
+                                                </a>
+                                            </figure>
+                                            <div class="post-box__info-meta-text">
+                                                <h4>
+                                                    <a class="info-meta-link" href="#">Thabo Mbuyisa<span class="info-meta-link__branch-action">Renamed branch Dev</span></a>
+                                                    <span class="info-meta-time">about 1 hour ago </span>
+                                                </h4>
+                                                <p class="commit-log__item">   
+                                                    <a href="#">
+                                                        <span><i class="fa fa-tasks" aria-hidden="true"></i>
+                                                        </span>ee83517cdb
+                                                    </a>
+                                                    <span class="commit-log__message">Task updates area and Projects status components created</span>
+                                                </p>
+                                            </div>
+                                        </header>
+                                        <footer class="post-box__box-bottom">
+                                            <div class="post-box__box-bottom__comments">
+                                                <span class=""><i class="fa fa-comments-o" aria-hidden="true"></i>5 Comments</span>
+                                            </div>
+                                            <a class="oval-btn-lrg" href="#">Comment</a>
+                                        </footer>
+                                    </article>
+                                </section>
+                                <footer class="card__footer">
+                                    <hr>
+                                    <div class="card__stats">
+                                        <i class="fa fa-clock-o"></i> Last updated 2 days ago
+                                    </div>
+                                </footer>
+                            </article>
+                        </div>
+                        <!-- /Col_01 -->
+
+                        <!-- Col_02 -->
+                        <div class="col-md-4">
+                            <article class="card">
+                                <header class="card__header">
+                                    <h4 class="card__title">Deadlines (3)</h4>
+                                    <span class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            Today<b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Tomorrow</a></li>
+                                            <li><a href="#">Next Week</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Calendar</a></li>
+                                        </ul>
+                                    </span>
+                                </header>
+                                <section class="card__content">
+
+                                    <!-- Deadline_01 -->
+                                    <article class="post-box">
+                                        <header class="post-box__info-meta-header">
+                                            <div class="post-box__info-meta-text">
+                                                <h4 class="taskTitle">
+                                                    <span class="branch-action">Due Today</span>
+                                                    <a class="info-meta-link" href="#">New dashboard design</a>
+                                                </h4>
+                                                <p>   
+                                                    Backlog responsive dashboard re-design for desktop and mobile devices
+                                                </p>
+                                                
+                                            </div>
+                                        </header>
+                                        <footer class="post-box__box-bottom">
+                                            <span>Category | Design</span>
+                                        </footer>
+                                    </article>
+                                    <!-- /Deadline_01 -->
+
+                                    <!-- Deadline_02 -->
+                                    <article class="post-box">
+                                        <header class="post-box__info-meta-header">
+                                            <div class="post-box__info-meta-text">
+                                                <h4 class="taskTitle">
+                                                    <span class="branch-action">Due Today</span>
+                                                    <a class="info-meta-link" href="#">Set up new QA environment</a>
+                                                </h4>
+                                                <p>   
+                                                    Create a new QA environment for testing on mobile devices
+                                                </p>
+                                                
+                                            </div>
+                                        </header>
+                                        <footer class="post-box__box-bottom">
+                                            <span>Category | Development</span>
+                                        </footer>
+                                    </article>
+                                    <!-- /Deadline_02 -->
+
+                                    <!-- Deadline_03 -->
+                                    <article class="post-box">
+                                        <header class="post-box__info-meta-header">
+                                            <div class="post-box__info-meta-text">
+                                                <h4 class="taskTitle">
+                                                    <span class="branch-action">Due Today</span>
+                                                    <a class="info-meta-link" href="#">Brainstorm on Nulab app case-studies</a>
+                                                </h4>
+                                                <p>   
+                                                    Some feedback came back from some of the usability studies conducted on the Nulab app
+                                                </p>
+                                                
+                                            </div>
+                                        </header>
+                                        <footer class="post-box__box-bottom">
+                                            <span>Category | UX</span>
+                                        </footer>
+                                    </article>
+                                    <!-- /Deadline_03 -->
+
+                                </section>
+                                <footer class="card__footer">
+                                    <hr>
+                                    <div class="card__stats">
+                                        <i class="fa fa-clock-o"></i> Last updated a day ago
+                                    </div>
+                                </footer>
+                            </article>
+                        </div>
+                        <!-- /Col_02 -->
+                    </div>
+                    <!-- /Row_02 -->
+                </div>
+            </main>
+            <!-- /Content -->
+
+        </article>
+    </div>
+</body>
+
+<!-- Core JS Files -->
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Radial Progress Chart Plugin -->
+<script async src="js/radialprogress.js"></script>
+
+<!-- Custom JS Files -->
+<script async src="js/backlog-scripts.js"></script>
+</html>

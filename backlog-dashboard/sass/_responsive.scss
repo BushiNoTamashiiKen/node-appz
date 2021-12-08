@@ -1,0 +1,129 @@
+/*-------------------*\
+  RESPONSIVE STYLING
+\*-------------------*/
+
+@media (min-width: 992px){
+
+    .navbar-brand-mobile,
+    #new-btn-mobile{
+
+        display: none;
+    }
+    .navbar-nav > li > .dropdown-menu, .dropdown .dropdown-menu{
+        @include transform-scale(0);
+        @include transition($slow-transition-time, $transition-bezier);
+    }
+    .navbar-nav > li.open > .dropdown-menu, .dropdown.open .dropdown-menu{
+        @include transform-scale(1);
+        @include transform-origin($dropdown-coordinates);
+
+    }
+
+    body > .navbar-collapse.collapse{
+        display: none !important;
+    }
+
+    .card{
+        form{
+            [class*="col-"]{
+                padding: 6px;
+            }
+            [class*="col-"]:first-child{
+                padding-left: 15px;
+            }
+            [class*="col-"]:last-child{
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+/*--- Changes for small display ---*/
+
+@media (max-width: 991px){
+
+    .sidebar{
+
+        display: none;
+    }
+    .main-panel{
+
+        width: 100vw;
+        overflow: hidden;
+        float: none;
+    }
+    .navbar-brand{
+
+        display: none;
+    }
+    .navbar-brand-mobile{
+
+        display: inline-block;
+        margin: 15px 20px;
+
+        img{
+
+            width: 100px;
+            height: auto;
+        }
+    }
+    .main-panel__navbar .navbar-nav .new-btn{
+
+        padding: 10px;
+        background-color: #00e4ac;
+        color: $white-color;
+    }
+    .navbar{
+        .container{
+
+            left: 0;
+            width: 100%;
+            @include transition (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+            position: relative;
+        }
+    }
+    .navbar-nav {
+
+        margin: 15px 10px 10px;
+        float: right;
+        .open .dropdown-menu > li{
+
+            & > a{
+                padding: 10px 15px 10px 60px;
+            }
+        }
+    }
+
+    /*-- Hide Burndown Chart --*/
+    #burndown{
+
+        display: none;
+    }
+
+    /*-- Card Components --*/
+    .card__content{
+        .post-box__avatar{
+
+            height: 100%;
+        }
+        .post-box{ 
+            .info-meta-link span{
+
+                display: table;
+                margin: 5px 0;
+            }
+            &__info-meta-text{ 
+
+                h4{
+
+                    margin: 0 0 30px;
+                }
+                .commit-log__message{
+
+                    display: block;
+                    margin: 5px 0 30px;
+                }
+            }
+        }
+    }
+}

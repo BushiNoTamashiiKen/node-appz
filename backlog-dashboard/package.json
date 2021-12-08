@@ -1,0 +1,23 @@
+{
+  "name": "backlog-redesign",
+  "version": "1.0.0",
+  "description": "A redesign of the Backlog service",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://nulab-exam.backlog.jp/git/THABO/app.git/"
+  },
+  "keywords": [
+    "Dashbaord",
+    "Nulab",
+    "Backlog"
+  ],
+  "author": "MeatMan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}

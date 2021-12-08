@@ -1,0 +1,106 @@
+/*-- Sass test 01 --*/
+/**
+ * Grid layout mixin
+ * Uses flexbox for layout
+ */
+/**
+ * Padding settings
+ * Accepts 1 to four args
+ */
+/**
+ * Centers elements in viewport
+ * Must be within relative container
+ */
+/**
+ * Define responsive viewport directives
+ * Controls responsive layout view
+ */
+/**
+ * App Effects mixin
+ * Used by main.scss
+ */
+/**
+ * Creates rounded corners
+ * Includes browser prefixes
+ */
+body {
+  margin: 0;
+  background-color: #fafafa;
+  font-family: helvetica-neue, helvetica, sans-serif; }
+  body p {
+    font-size: 14px; }
+    @media screen and (max-width: 480px) {
+      body p {
+        font-size: 20px;
+        line-height: 1.5em; } }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+video {
+  object-fit: cover; }
+
+header {
+  background-color: #fafafa;
+  text-align: center;
+  padding: 20px 50px; }
+
+.contents {
+  position: relative;
+  max-width: 1900px; }
+  .contents article {
+    background: #fafafa;
+    padding: 30px 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px; }
+  .contents figure img:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); }
+
+footer {
+  background: #bada55;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 30px 30px; }
+
+@media screen and (max-width: 1400px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; } }
+
+@media screen and (max-width: 1400px) {
+  section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; } }
+@media screen and (max-width: 768px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; } }
+@media screen and (max-width: 480px) {
+  section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; } }
+
+@media screen and (max-width: 480px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; } }
+
+/*# sourceMappingURL=main.css.map */

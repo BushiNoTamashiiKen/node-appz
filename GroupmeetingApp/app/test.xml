@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<!--
+ /**	
+ * Test XML file for ajax request
+ */
+-->
+
+<root>
+	I'm a test xml document retrieved via AJAX.
+</root>
+

@@ -1,0 +1,12 @@
+/**
+ * App components:
+ * Buttons, Loaders, Scrollers, Tabs etc.
+ */
+
+ @mixin button_component($color, $style, $size, $typography){
+
+ 	background: $color;
+ 	border: $style;
+ 	padding: $size;
+ 	color: $typography;
+ }

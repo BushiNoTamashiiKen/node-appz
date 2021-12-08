@@ -1,0 +1,40 @@
+{
+  "name": "mondaymuse",
+  "version": "1.0.0",
+  "description": "My first express application running on a node server",
+  "main": "app.js",
+  "scripts": {
+    "test": "run mondaymuse test script"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BushiNoTamashiiKen"
+  },
+  "keywords": [
+    "mondaymuse",
+    "node",
+    "app",
+    "node",
+    "server",
+    "local",
+    "express",
+    "app"
+  ],
+  "author": "Thabo Mbuyisa",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie": "^0.3.1",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-generator": "^4.13.4",
+    "multer": "^1.2.0",
+    "parser": "^0.1.4",
+    "path": "^0.12.7",
+    "socket.io": "^1.5.1"
+  },
+  "devDependencies": {
+    "bootstrap-material-design": "^0.5.10",
+    "jsonfile": "^2.4.0"
+  }
+}

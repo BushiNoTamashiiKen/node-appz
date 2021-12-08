@@ -1,0 +1,50 @@
+/**
+ * App Effects mixin
+ * Used by main.scss
+ */
+
+
+ /**
+  * Controls links visual
+  */
+  @mixin links($baseColor, $hover, $active, $style){
+
+  	color: $baseColor;
+  	&:hover{
+
+  		color: $hover;
+  		text-decoration: $style;
+  	}
+  	&:active{
+
+  		color: $active;
+  		text-decoration: $style;
+  	}
+  }
+
+ /**
+  * Overlays images 
+  */
+ @mixin overlay($position, $width, $height, $alpha){
+
+ 	&:before{
+ 		content: "";
+ 		position: $position;
+ 		width: $width;
+ 		height: $height;
+ 		background-color: $alpha;
+ 	}
+ }
+
+ /**
+  * Creates rounded corners
+  * Includes browser prefixes
+  */
+  @mixin rounded_corners($borderRadius){
+
+  	border-radius: $borderRadius;
+  	-webkit-border-radius: $borderRadius;
+  	-moz-border-radius: $borderRadius;
+  	-ms-border-radius: $borderRadius;
+  }
+

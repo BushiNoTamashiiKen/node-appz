@@ -1,0 +1,43 @@
+/**
+ * App style variables
+ * Used by style.scss
+ */
+
+ // Vars
+ $heading-colors: #009688;
+ $heading-text: #fff;
+ $body-margins: 25%;
+ $levels: #000;
+ $levels2: $levels + 50;
+ $base: #fff;
+ $columns: 100%;
+ $gutters: 30px;
+
+ /**
+  * Responsive views mixin
+  * Used by style.scss
+  */
+
+  // Vars
+  $Desktop: 1400px;
+  $Tablet: 768px;
+  $Mobile: 480px;
+
+  @mixin desktopView{
+
+  	@media screen and (max-width: #{$Desktop}){
+  		@content;
+  	}
+  }
+  @mixin tabletView{
+
+  	@media screen and (max-width: #{$Tablet}){
+  		@content;
+  	}
+  }
+  @mixin mobileView{
+
+  	@media screen and (max-width: #{$Mobile}){
+  		@content;
+  	}
+  }

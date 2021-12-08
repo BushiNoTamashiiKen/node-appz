@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Working with Node app server</title>
+    <link rel="stylesheet" href="scss/style.css" type="text/css" />
+
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="dist/js/material.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      #messages { list-style-type: none; margin: 0; padding: 0; position: relative; top: 10em;}
+      #messages li:nth-child(odd) {}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Socket.io Chat App</h1>
+      <p class="text">A real-time chat relay app</p>
+    </header>
+    <article class="message_body">
+      <ul id="messages"></ul>
+    </article>
+    <form class="chat" action="">
+      <input id="m" autocomplete="off" />
+      <button class="btn btn-raised btn-primary">Send</button>
+    </form>
+  </body>
+  <script>
+
+    // Initialise socket connection instance
+   var socket = io.connect('http://localhost:8085');
+
+   // When user clicks send btn
+   $(() => {
+
+      $('form').submit(() => {
+
+          var message = $('#m').val();
+          $('#m').val('');
+
+         // Broadcast event to server-side
+         socket.emit('new message', message);
+         return false;
+      }); 
+   });
+
+   // Catch server-side event for display
+   socket.on('newMsg', (msg) => {
+
+      $('#messages').append('<li>' + msg + '</li>');
+   });
+  </script>
+</html>

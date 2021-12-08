@@ -1,0 +1,13 @@
+ $heading-colors: #cecece;
+ $columns: 100%;
+ $gutters: 30px;
+
+ footer{
+
+ 	background: $heading-colors;
+ 	padding: $gutters;
+ 	.cols{
+ 		width: $columns;
+ 		.copyright { @extend .text; }
+ 	}
+ }

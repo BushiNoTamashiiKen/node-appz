@@ -1,0 +1,25 @@
+{
+  "name": "NodeAppz",
+  "version": "1.0.0",
+  "description": "A living organism composed of Node and related JS web-app cells",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BushiNoTamashiiKen/NodeAppz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BushiNoTamashiiKen/NodeAppz/issues"
+  },
+  "homepage": "https://github.com/BushiNoTamashiiKen/NodeAppz#readme",
+  "dependencies": {
+    "fetch-tweets": "^0.1.7",
+    "twit": "^2.2.11",
+    "twitter-lite": "^1.1.0"
+  }
+}

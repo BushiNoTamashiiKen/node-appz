@@ -1,0 +1,63 @@
+/**
+ * Grid layout mixin
+ * Uses flexbox for layout
+ */
+ @mixin app_grid($layoutType, $layoutDir, $layoutFlow){
+
+ 	  display: $layoutType;
+ 	  flex-direction: $layoutDir;
+  	flex-wrap: $layoutFlow;
+ }
+
+ /**
+  * Padding settings
+  * Accepts 1 to four args
+  */
+  @mixin spacing_inner($pads...){
+
+  	 padding: $pads;
+  }
+
+ /**
+  * Centers elements in viewport
+  * Must be within relative container
+  */
+  @mixin nowidth_center($pos, $topVal, $leftVal, $trans){
+
+  	 position: $pos;
+  	 top: $topVal;
+  	 left: $leftVal;
+  	 transform: $trans;
+  }
+
+ /**
+  * Define responsive viewport directives
+  * Controls responsive layout view
+  */
+ // Viewport sizes
+ $Desktop: 1400px;
+ $Tablet: 768px;
+ $Mobile: 480px;
+
+ @mixin desktopView{
+
+ 	@media screen and (max-width: #{$Desktop}){
+
+ 		 @content;
+ 	}
+ }
+ @mixin tabletView{
+
+ 	@media screen and (max-width: #{$Tablet}){
+
+ 		 @content;
+ 	}
+ }
+ @mixin mobileView{
+
+ 	@media screen and (max-width: #{$Mobile}){
+
+ 		 @content;
+ 	}
+ }
+ 

@@ -1,0 +1,54 @@
+{
+    "_id": "dc461895-09a2-4cf5-8fdc-e5056c3258d91466469166815",
+    "_class": "com.geekedin.domain.entities.mongo.EDeveloper",
+    "scores": [],
+    "libraryScores": [],
+    "compactLibraries": [],
+    "name": "BushiNoTamashiiKen",
+    "email": "mbuyisathabo1@gmail.com",
+    "location": "Netherlands",
+    "country": "NL",
+    "city": "3048fc17-f95c-443f-a866-a0dd7c1e439f1448621387038",
+    "score": 0,
+    "scanCompleted": false,
+    "socialNetworks": [
+        {
+            "_id": "https://github.com/BushiNoTamashiiKen",
+            "socialNetwork": "other",
+            "url": "https://github.com/BushiNoTamashiiKen"
+        },
+        {
+            "_id": "BushiNoTamashiiKen",
+            "socialNetwork": "github",
+            "url": "https://github.com/BushiNoTamashiiKen"
+        },
+        {
+            "_id": "http://behance.net/MeatMan",
+            "socialNetwork": "other",
+            "url": "http://behance.net/MeatMan"
+        }
+    ],
+    "locationPoint": {
+        "x": 5.75,
+        "y": 52.25
+    },
+    "yearsOfExperience": 0,
+    "otherLocations": [],
+    "extraEmails": [],
+    "locateTryFailed": false,
+    "locateTried": false,
+    "beingLocated": false,
+    "remoteLocateTried": true,
+    "blogFindTried": false,
+    "contactIsPossible": true,
+    "freelancer": false,
+    "compactLibrariesComputed": false,
+    "compactLibrariesBeingComputed": false,
+    "followersFound": false,
+    "emailAddresses": [
+        {
+            "email": "mbuyisathabo1@gmail.com",
+            "type": "primary"
+        }
+    ]
+}
